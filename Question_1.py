@@ -20,3 +20,16 @@ while True:
             shoppingCart.update({product_name:brand})
             print(shoppingCart)
         print("You entered following items in the cart.")
+    
+    
+    
+    elif x==2:
+        f= input("Enter the item to be searched.:")
+        if f==product_name:
+            print("item found")
+        else:
+            print("No product exist with this name.")
+            
+    
+    
+    
