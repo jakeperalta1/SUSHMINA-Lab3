@@ -24,11 +24,26 @@ while True:
     
     
     elif x==2:
-        f= input("Enter the item to be searched.:")
+        f= input("Enter the item to be searched:")
         if f==product_name:
             print("item found")
         else:
             print("No product exist with this name.")
+            
+    elif x==3:
+        g= input("Enter item to delete:")
+        del shoppingCart[g]
+        print("item deleted")
+        if shoppingCart == {}:
+            print("Cart is empty, no item is found")
+    
+    elif x==4:
+        print("Exited.")
+        break
+        
+    else:
+        print("option not available")
+
             
     
     
