@@ -10,32 +10,35 @@ while True:
     x=int(input("Enter your choice: "))
     if x==1:
         ee= int(input("Enter the number of items to be added in the cart: "))
+        
+        
         for i in range(ee):
-            if len(shoppingCart)==5:
-                 print("Inventory is full.")
+                if len(shoppingCart)==5:
+                 print("Cart is full.")
+                 break
             
             
-            product_name=input("Enter item: ")
-            brand=input("Enter brand name:")
-            shoppingCart.update({product_name:brand})
-            print(shoppingCart)
-        print("You entered following items in the cart.")
+                product_name=input("Enter item:")
+                brand=input("Enter brand name:")
+                shoppingCart.update({product_name:brand})
+                print(shoppingCart)
+                print("You entered following items in the cart.")
     
     
     
     elif x==2:
-        f= input("Enter the item to be searched:")
-        if f==product_name:
-            print("item found")
-        else:
-            print("No product exist with this name.")
+             f= input("Enter the item to be searched:")
+             if f in shoppingCart:
+                print({product_name:brand})
+             else:
+                 print("No product exist with this name.")
             
     elif x==3:
-        g= input("Enter item to delete:")
-        del shoppingCart[g]
-        print("item deleted")
-        if shoppingCart == {}:
-            print("Cart is empty, no item is found")
+            g= input("Enter item to delete:")
+            del shoppingCart[g]
+            print("item deleted")
+            if shoppingCart == {}:
+                print("Cart is empty, no item is found")
     
     elif x==4:
         print("Exited.")
@@ -43,6 +46,8 @@ while True:
         
     else:
         print("option not available")
+
+
 
             
     
