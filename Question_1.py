@@ -45,7 +45,7 @@ while True:
         break
         
     else:
-        print("option not available")
+        print("Wrong option entered.")
 
 
 
